@@ -360,13 +360,13 @@ svg:hover{
         height:80vh;
     }
     nav{
-        padding: 5% 3%;
+        padding: 10% 5%;
     }
     .header-text h1,.offer-text h1{
        font-size: 2.5em;
     }
     .header-text,.offer-text{
-        padding-top: 40%;
+        padding-top: 50%;
     }
     .Next-header .row{
         display: flex;
@@ -445,14 +445,8 @@ svg:hover{
         cursor: pointer;
         visibility: visible;
     }
-    .righton{
-        right: 0%;
-    }
-    .rightoff{
-        right: -100%;
-    }
 }
-@media screen and (max-width:950px){
+@media only screen and (max-width:1150px){
     .header-container,.offer-container{
         padding:8% 5%;
         height:80vh;
@@ -464,7 +458,7 @@ svg:hover{
        font-size: 2.5em;
     }
     .header-text,.offer-text{
-        padding-top: 20%;
+        padding-top: 10%;
     }
     .Next-header .row{
         display: flex;
@@ -534,14 +528,20 @@ svg:hover{
         width: 100%;
         background-color: black;
         z-index: 100;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in;
     }
     .nav-center li{
         margin-top:20px ;
+        margin-bottom: 20px;
     }
     .btn{
         cursor: pointer;
         visibility: visible;
+    }
+    .btn img{
+        width: 50px;
+        height: 50px;
+        transition: all 0.5s ease;
     }
     .righton{
         right: 0%;
