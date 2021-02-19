@@ -2,6 +2,7 @@ import '../App.css'
 import logo from '../images/logo.png'
 import {useState} from 'react'
 import menuopen from '../images/menu.svg'
+import close from '../images/close.png'
 const Navbar = () => {
     const [navactive,setnav]=useState(false);
     const scrolling = ()=>{
@@ -15,19 +16,14 @@ const Navbar = () => {
     window.addEventListener('scroll',scrolling);
     const [right,setright]=useState(false);
      const responsive = () =>{
-         const nav = document.querySelector('.nav-center');
-         if (nav.style.right = '0%'){
-             setright(false)
-         }else{
-             setright(true);
-         }
+         setright(!right);
      }
     return (  
         <nav className={navactive ? "active" : null}>
            <div className="logo">
             <img src={logo}/>
            </div>
-           <div className={ right ? "nav-center-right" : "nav-center"}>
+           <div className="nav-center" style={{right: right ? "0%" : "-100%"}}>
                <li><a href="#header">Header</a></li>
                <li><a href="#features">Features</a></li>
                <li><a href="#offer">Offer</a></li>
@@ -35,7 +31,7 @@ const Navbar = () => {
                <li><a href="#contact">Contact</a></li>
            </div>
            <div className="btn" id="btn">
-               <img src={menuopen} onClick={responsive}/> 
+               <img src={!right ? menuopen : close} onClick={responsive}/> 
            </div>
        </nav>
     );
